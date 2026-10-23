@@ -216,3 +216,13 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Go builds and migration state
+/bin/
+*.test
+coverage.out
+/.auth/
+/.credentials/
+/temp-copy/
+.env.*
+!.env.example

@@ -1,0 +1,37 @@
+# Only the build inputs are admitted, including for custom host state paths.
+**
+!go.mod
+!go.sum
+# Allow source traversal, but admit only Go files at any depth.
+!src/
+src/**
+!src/**/*.go
+
+# Never admit credentials, caches, or locally staged data under source either.
+**/.*
+**/.*/**
+**/.git
+**/.env
+**/.env.*
+**/.auth
+**/.credentials
+**/credentials
+**/credentials/**
+**/temp-copy
+**/temp-copy/**
+**/bin
+**/bin/**
+**/node_modules
+**/node_modules/**
+**/go-build*
+**/go-build*/**
+**/*.test
+**/*.out
+**/*.prof
+**/.DS_Store
+**/.runner-*
+**/*credentials*.json
+**/*client_secret*.json
+**/*token*.json
+**/*.pem
+**/*.key
